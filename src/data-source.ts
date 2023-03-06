@@ -1,11 +1,9 @@
 import { DataSource } from "typeorm";
 import { Company } from "./entities/company.entity";
 import { Storage } from "./entities/storage.entity";
-import { initialMigration1677956279396 } from "./migrations/1677956279396-initialMigration";
-import { createTables1677956384738 } from "./migrations/1677956384738-createTables";
-import { update1677986892173 } from "./migrations/1677986892173-update";
-import { updateTables1677986912726 } from "./migrations/1677986912726-updateTables";
-import { companyPassword1677989517277 } from "./migrations/1677989517277-companyPassword";
+import { initialMigration1678030868287 } from "./migrations/1678030868287-initialMigration";
+import { createTables1678030890640 } from "./migrations/1678030890640-createTables";
+import { createStorageEntity1678073795907 } from "./migrations/1678073795907-createStorageEntity";
 
 require("dotenv").config();
 
@@ -22,11 +20,9 @@ export const AppDataSource = new DataSource({
   logging: true,
   entities: [Company, Storage],
   migrations: [
-    initialMigration1677956279396,
-    createTables1677956384738,
-    update1677986892173,
-    updateTables1677986912726,
-    companyPassword1677989517277,
+    initialMigration1678030868287,
+    createTables1678030890640,
+    createStorageEntity1678073795907,
   ],
 });
 

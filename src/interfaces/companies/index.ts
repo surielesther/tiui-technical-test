@@ -16,6 +16,8 @@ export interface ICompanyLogin {
   password: string;
 }
 
-export interface IListOneCompany {
-  authorization?: string;
+export interface ICompanyUpdate {
+  name?: string;
+  description?: string;
+  password?: string;
 }

@@ -1,5 +1,5 @@
 import express from "express";
-import routes from "./routes/company.routes";
+import routes from "./routes";
 
 const app = express();
 
@@ -9,5 +9,5 @@ app.use(routes);
 const port = 3000;
 
 app.listen(port, () => {
-  console.log(`App rodando na porta ${port}`);
+  console.log(`App running on port ${port}`);
 });
